@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Viết một chương sắp xếp các phần tử là số ở trong mảng theo thứ tự tăng dần.[20 điểm]
+        function minToMax(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr.length-i; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        let temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+            return arr;
+        }
+        let arr = [5, 2, 3, 4, 1];
+        console.log("Mảng trước khi sắp xếp:");
+        console.log(arr); //in ra [5,2,3,4,1]
+        console.log("Mảng sau khi sắp xếp:");
+        console.log(minToMax(arr)); //in ra [1,2,3,4,5]
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Cho 1 chuỗi str. Viết chương trình đảo ngược chuỗi và in ra kết quả.[10 điểm] 
+        function reverse(str) {
+            let reversedStr = '';
+            for (let i = str.length - 1; i >= 0; i--) {
+                reversedStr += str[i];
+            }
+            return reversedStr;
+        }
+        // Sử dụng hàm reverseString để đảo ngược chuỗi
+        let str="program"
+        let strSecond = "data"
+       console.log(reverse(str)) // Kết quả: "margorp"
+        console.log(reverse(strSecond));;// kết quả "atad"
+    </script>
+</body>
+</html>

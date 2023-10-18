@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Tạo hình chữ nhật rỗng bằng JavaScript.[10 điểm]
+        function drawRecTangle(m,n) {
+            //m:chiều rộng
+            //n:chiều cao
+            let rectangle = '';
+            for (let i = 0; i < n; i++) {
+                for (let j = 0; j < m; j++) {
+                    if (i === 0 || i === n - 1 || j === 0 || j === m - 1) {
+                        rectangle += '*';
+                    } else {
+                        rectangle += ' ';
+                    }
+                }
+                rectangle += '\n';
+            }
+            return rectangle;
+        }
+        // Ví dụ:
+        console.log(drawRecTangle(7, 9));//in hình chữ nhật có chiều rộng là 7 và chiều cao là 9
+    </script>
+</body>
+</html>

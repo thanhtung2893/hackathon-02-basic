@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Viết một chương trình xóa các phần tử trùng của một mảng và in ra kết quả.[20 điểm] 
+        function remove(arr) {
+            let newArr = [];
+            for (let i = 0; i < arr.length; i++) {
+                if (newArr.indexOf(arr[i]) == -1) {
+                    newArr.push(arr[i]);
+                }
+            }
+            return newArr;
+        }
+        //ví dụ cho 2 mảng theo đề bài:
+
+        let arr = ["one", "two", "three", "one", "one", "four", "five", "four", "five", "five"];
+        console.log(remove(arr));// in ra ['one', 'two', 'three', 'four', 'five']
+
+        let arrSecond = [1, 2, 3, 3, 4, 5, 4, 4, 4, 5, 5];
+        console.log(remove(arrSecond));// in ra [1,2,3,4,5]
+
+    </script>
+</body>
+
+</html>

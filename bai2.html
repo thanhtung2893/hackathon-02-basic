@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Viết 1 chương trình với đầu vào là 1 chuỗi ký tự và in ra chuỗi đó 
+          với các ký tự đầu của chữ mỗi chữ được viết hoa.[20 điểm] */
+        function upFistString(string) {
+            let words = string.split(" ");
+            for (let i = 0; i < words.length; i++) {
+                if (words[i] !== "") {
+                    words[i] = words[i][0].toUpperCase() + words[i].slice(1);
+                }
+            }
+            let newItem = words.join(" ");
+            console.log(newItem);
+        }
+        // Đầu vào là một chuỗi:
+        let str = "this is A Test";
+        let strSecond = "hello rikkei academy";
+        // Gọi hàm:
+        upFistString(str);// đầu ra "This Is A Test"
+        upFistString(strSecond);// đầu ra "Hello Rikkei Academy"
+    </script>
+</body>
+</html>
